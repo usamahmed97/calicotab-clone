@@ -1,21 +1,21 @@
 export const navbarItems = [
-  { key: "team-tab", label: <div className="text-gray-400">Team Tab</div> },
+  { key: "team-tab", label: "Team Tab" },
   {
     key: "speaker-tab",
-    label: <div className="text-gray-400">Speaker Tab</div>,
+    label: "Speaker Tab",
   },
   {
     key: "open-speaker",
-    label: <div className="text-gray-400">Open Speakers</div>,
+    label: "Open Speakers",
   },
   {
     key: "school-speakers",
-    label: <div className="text-gray-400">School Speakers</div>,
+    label: "School Speakers",
   },
-  { key: "results", label: <div className="text-gray-400">Results</div> },
-  { key: "diversity", label: <div className="text-gray-400">Diversity</div> },
+  { key: "results", label: "Results" },
+  { key: "diversity", label: "Diversity" },
   {
     key: "participants",
-    label: <div className="text-gray-400">Participants</div>,
+    label: "Participants",
   },
 ];
