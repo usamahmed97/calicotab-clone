@@ -6,6 +6,7 @@ import {
   LOGIN,
   OPEN_SPEAKERS,
   PARTICIPANTS,
+  PASSWORD_RESET,
   RESULTS,
   SIGN_UP,
   SPEAKER_TAB,
@@ -13,6 +14,8 @@ import {
 } from "./routes";
 import Home from "../pages/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
+import Login from "../pages/Login/Login";
+import PasswordReset from "../pages/PasswordReset/PasswordReset";
 
 const AppRouter = () => {
   return (
@@ -20,7 +23,8 @@ const AppRouter = () => {
       <Navbar />
       <Routes>
         <Route path={HOME} element={<Home />} />
-        <Route path={LOGIN} element={<div>Login</div>} />
+        <Route path={LOGIN} element={<Login />} />
+        <Route path={PASSWORD_RESET} element={<PasswordReset />} />
         <Route path={SIGN_UP} element={<div>Sign up</div>} />
         <Route path={TEAM_TAB} element={<div>team tab</div>} />
         <Route path={SPEAKER_TAB} element={<div>speaker tab</div>} />
