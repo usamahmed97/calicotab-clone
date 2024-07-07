@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import {
   DIVERSITY,
   HOME,
@@ -16,11 +16,14 @@ import Home from "../pages/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
 import Login from "../pages/Login/Login";
 import PasswordReset from "../pages/PasswordReset/PasswordReset";
+import Footer from "../components/Footer/Footer";
 
 const AppRouter = () => {
+  const location = useLocation();
+  const hideNavbarPaths = [LOGIN, PASSWORD_RESET];
   return (
-    <BrowserRouter>
-      <Navbar />
+    <>
+      {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path={HOME} element={<Home />} />
         <Route path={LOGIN} element={<Login />} />
@@ -33,7 +36,8 @@ const AppRouter = () => {
         <Route path={DIVERSITY} element={<div>diversity</div>} />
         <Route path={PARTICIPANTS} element={<div>participants</div>} />
       </Routes>
-    </BrowserRouter>
+      <Footer />
+    </>
   );
 };
 

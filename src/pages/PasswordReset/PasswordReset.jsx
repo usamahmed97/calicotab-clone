@@ -4,7 +4,7 @@ import PasswordResetForm from "../../components/PasswordResetForm/PasswordResetF
 
 const PasswordReset = () => {
   return (
-    <div className="flex items-center justify-center p-4 bg-backgroundGray">
+    <div className="flex items-center justify-center px-4 pt-4 pb-48 bg-backgroundGray">
       <div className="bg-white border rounded-md p-4">
         <div className="flex items-center gap-2 py-2">
           🔐
