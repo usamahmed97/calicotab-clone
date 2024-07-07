@@ -11,6 +11,7 @@ module.exports = {
       },
       colors: {
         backgroundGray: "#F9FAFC",
+        seaGreen: "#00BF8A",
       },
     },
   },

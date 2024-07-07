@@ -1,5 +1,6 @@
 export const HOME = "/";
 export const LOGIN = "/login";
+export const PASSWORD_RESET = "/password-reset";
 export const SIGN_UP = "/sign-up";
 export const TEAM_TAB = "/team-tab";
 export const SPEAKER_TAB = "/speaker-tab";

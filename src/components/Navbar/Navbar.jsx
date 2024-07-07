@@ -4,16 +4,21 @@ import { Header } from "antd/es/layout/layout";
 import { navbarItems } from "../../enums";
 import { MenuOutlined } from "@ant-design/icons";
 import MobileDrawer from "../MobileDrawer/MobileDrawer";
+import { useNavigate } from "react-router-dom";
+import { HOME, LOGIN } from "../../routes/routes";
 
 const Navbar = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div>
       <Header className="top-0 z-10 w-full bg-white border-b flex items-center">
         <div className="flex items-center gap-2 mr-2">
           <Avatar />
-          <div>IODC24</div>
+          <div onClick={() => navigate(HOME)} className="cursor-pointer">
+            IODC24
+          </div>
         </div>
         <div className="xs:hidden lg:flex gap-3">
           {navbarItems.map((item) => (
@@ -25,7 +30,10 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="xs:hidden lg:block text-gray-400 hover:text-purple-500 cursor-pointer ml-auto">
+        <div
+          className="xs:hidden lg:block text-gray-400 hover:text-purple-500 cursor-pointer ml-auto"
+          onClick={() => navigate(LOGIN)}
+        >
           Login
         </div>
         <div
